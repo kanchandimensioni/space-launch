@@ -1,0 +1,82 @@
+{
+  "name": "senassoc-spacex",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/polyfill": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "@babel/preset-react": "^7.0.0-beta.51",
+    "@babel/runtime": "^7.12.5",
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^11.1.1",
+    "@testing-library/user-event": "^12.2.0",
+    "axios": "0.16.2",
+    "axios-case-converter": "^0.6.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^8.2.3",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "^8.0.0-beta.0",
+    "compression": "1.7.0",
+    "concurrently": "3.5.0",
+    "express": "4.15.4",
+    "express-http-proxy": "1.0.6",
+    "lodash": "4.17.4",
+    "nodemon": "1.12.0",
+    "npm-run-all": "4.1.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "5.2.0",
+    "react-redux": "5.0.6",
+    "react-router-config": "1.0.0-beta.4",
+    "react-router-dom": "4.2.2",
+    "react-scripts": "4.0.0",
+    "redux": "3.7.2",
+    "redux-thunk": "2.2.0",
+    "serialize-javascript": "1.4.0",
+    "web-vitals": "^0.2.4",
+    "webpack": "3.5.6",
+    "webpack-dev-server": "2.8.2",
+    "webpack-merge": "4.1.0",
+    "webpack-node-externals": "1.6.0"
+  },
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
+    "dev:build-server": "webpack --config webpack.server.js --watch",
+    "dev:build-client": "webpack --config webpack.client.js --watch",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "resolutions": {
+    "**/@babel/runtime": "7.5.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1"
+  }
+}
